@@ -1,0 +1,219 @@
+/* Font for the title text */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+/* Font for the desc text */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.animation-area {
+  background: linear-gradient(to left, #242933, #242933);
+  width: 100%;
+  height: 100vh;
+}
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #585e69;
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: s;
+  animation-duration: 5.5s;
+}
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.card-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 2px;
+}
+.card {
+  text-align: center;
+  background: #2d323c;
+  padding: 50px 0;
+  z-index: 1;
+  border-radius: 15px;
+  width: 440px;
+}
+.card .card-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid #b474c4;
+  outline: 10px solid #3d414e;
+  margin: 0 auto;
+}
+
+.card .card-title {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  margin: 30px 0;
+  font-weight: bolder;
+  line-height: 5rem;
+}
+.card .firstPart {
+  background: linear-gradient(to right, #9d61b4, #bd679e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card .secondPart {
+  background: linear-gradient(to right, #c66897, #eb6f7c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card .thirdPart {
+  background: linear-gradient(to right, #7e5bcd, #9a60b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card .lastPart {
+  background: linear-gradient(to right, #a662ae, #d66a8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card .card-desc {
+  font-family: "Open Sans", sans-serif;
+  width: 90%;
+  margin-inline: auto;
+  color: #7b7f85;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.card > i {
+  color: #a26bb0;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 30px;
+  background-color: #3d414e;
+}
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.dots i {
+  font-size: 20px;
+  color: #a26bb0;
+}
+
+@media screen and (min-width: 401px) and (max-width: 576px) {
+  .card {
+    padding: 30px 0;
+    max-width: 360px;
+  }
+  .card .card-img {
+    width: 90px;
+    height: 90px;
+  }
+  .card .card-title {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    margin: 20px 0;
+  }
+  .card .card-desc {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .card > i {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    padding: 30px 0;
+    max-width: 300px;
+  }
+  .card .card-img {
+    width: 80px;
+    height: 80px;
+    outline: 6px solid #3d414e;
+    border: 3px solid #b474c4;
+  }
+  .card .card-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 20px 0;
+  }
+  .card .card-desc {
+    width: 90%;
+    margin-inline: auto;
+    font-size: 12px;
+  }
+  .card > i {
+    font-size: 20px;
+  }
+}
